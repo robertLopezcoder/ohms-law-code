@@ -1,0 +1,47 @@
+#include <stdio.h>
+int main()
+{
+    int option;
+    double V, I, R, result;
+     
+    printf( "Press 1 to calculate current; press 2 to calculate resistance; press 3 to calculate voltage\n" );
+    scanf("%i", &option );
+     
+    if( option == 1 ){
+        printf( "Enter the voltage\n" );
+        scanf("%lf", &V );
+         
+        printf( "Enter the resistance\n" );
+        scanf("%lf", &R );
+         
+        result = V / R;
+         
+        scanf( "The current is %f amps/n",result );
+        }
+         
+     else if( option == 2 ){
+        printf( "Enter the voltage\n" );
+        scanf( "%lf", &V );
+         
+        printf( "Enter the current\n" );
+        scanf( "%lf", &I );
+         
+        result = V / I;
+         
+        scanf( "The resistance is %f ohms/n");
+        }
+         
+     else if( option == 3 ){
+        printf( "Enter the resistance\n" );
+        scanf( "%lf", &R );
+         
+        printf( "Enter the current\n" );
+        scanf( "%lf", &I );
+         
+        result = I * R;
+         
+        scanf( "The voltage is %f volts/n" );
+        }  
+         
+     return 0;
+}
